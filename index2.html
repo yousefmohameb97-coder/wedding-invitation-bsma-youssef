@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دعوة زفاف بسمة & يوسف 💍</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: {
+              900: '#070b14',
+              800: '#0e1526',
+              700: '#15213b',
+              600: '#1d2c4d'
+            },
+            roseGold: {
+              100: '#fdf0f1',
+              200: '#f9d6d9',
+              300: '#f2abb1',
+              400: '#e88089',
+              500: '#d95a66',
+              600: '#b83b48'
+            },
+            sapphire: {
+              300: '#8ba6e8',
+              500: '#4368cc'
+            }
+          },
+          fontFamily: {
+            tajawal: ['Tajawal', 'sans-serif'],
+            amiri: ['Amiri', 'serif'],
+            ruqaa: ['Aref Ruqaa', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: radial-gradient(circle at top center, #15223e 0%, #080d19 100%);
+      color: #fdf0f1;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .rosegold-gradient-text {
+      background: linear-gradient(135deg, #fff0f2 0%, #f2abb1 50%, #e88089 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .diamond-gradient-text {
+      background: linear-gradient(135deg, #ffffff 0%, #d1e0ff 50%, #9cb8ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #particlesCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .glass-card {
+      background: rgba(14, 21, 38, 0.75);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(242, 171, 177, 0.25);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+    }
+
+    .glass-input {
+      background: rgba(7, 11, 20, 0.65);
+      border: 1px solid rgba(242, 171, 177, 0.3);
+      color: #fdf0f1;
+    }
+
+    .glass-input:focus {
+      border-color: #f2abb1;
+      box-shadow: 0 0 15px rgba(242, 171, 177, 0.25);
+    }
+
+    @keyframes gentleGlow {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(242,171,177,0.3)); }
+      50% { transform: scale(1.02); filter: drop-shadow(0 0 18px rgba(242,171,177,0.6)); }
+    }
+
+    .animate-gentle-glow {
+      animation: gentleGlow 4s infinite ease-in-out;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070b14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e88089;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="relative selection:bg-roseGold-400 selection:text-midnight-900">
+
+  <canvas id="particlesCanvas"></canvas>
+
+  <!-- Audio Control Floating Button -->
+  <div class="fixed top-5 left-5 z-50">
+    <button id="musicBtn" onclick="toggleAudio()" class="w-13 h-13 p-3.5 rounded-full glass-card text-roseGold-300 hover:text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border border-roseGold-300/40 group" title="تشغيل / إيقاف الموسيقى">
+      <i id="musicIcon" class="fa-solid fa-music text-xl group-hover:rotate-12 transition-transform"></i>
+    </button>
+  </div>
+
+  <main class="max-w-3xl mx-auto px-4 py-10 relative z-20 space-y-8">
+
+    <section class="glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden border border-roseGold-300/30">
+      
+      <!-- Ornamental Corners -->
+      <svg class="absolute top-0 right-0 w-32 h-32 text-roseGold-300/20 pointer-events-none" viewBox="0 0 100 100" fill="currentColor">
+        <path d="M0 0 L100 0 L100 8 L8 L8 L8 100 L0 100 Z" />
+        <circle cx="20" cy="20" r="5" />
+        <path d="M0 0 C 60 15, 15 60, 100 100 C 40 70, 70 40, 0 0 Z" opacity="0.6"/>
+      </svg>
+      <svg class="absolute bottom-0 left-0 w-32 h-32 text-roseGold-300/20 pointer-events-none rotate-180" viewBox="0 0 100 100" fill="currentColor">
+        <path d="M0 0 L100 0 L100 8 L8 L8 L8 100 L0 100 Z" />
+        <circle cx="20" cy="20" r="5" />
+        <path d="M0 0 C 60 15, 15 60, 100 100 C 40 70, 70 40, 0 0 Z" opacity="0.6"/>
+      </svg>
+
+      <!-- Basmala Header -->
+      <p class="font-amiri text-roseGold-300 text-xl md:text-2xl mb-3 tracking-wider">
+        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+      </p>
+
+      <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-roseGold-300 to-transparent mx-auto mb-6 opacity-80"></div>
+
+      <!-- Quranic Verse -->
+      <p class="font-amiri text-stone-200 text-base md:text-lg leading-relaxed max-w-xl mx-auto italic mb-8 opacity-90">
+        "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"
+      </p>
+
+      <p class="text-roseGold-100 text-sm md:text-base mb-3 font-light tracking-wide">
+        نتشرف بدعوتكم لحضور حفل زفاف
+      </p>
+
+      <!-- Couple Names -->
+      <div class="my-5 py-2">
+        <h1 class="font-ruqaa text-5xl md:text-7xl font-bold rosegold-gradient-text tracking-wide leading-tight animate-gentle-glow">
+          بسمة &amp; يوسف
+        </h1>
+      </div>
+
+      <p class="text-stone-300 text-base md:text-lg max-w-lg mx-auto leading-relaxed mt-2 mb-8 font-light">
+        لتكتمل فرحتنا ومسرتنا بمشاركتكم معنا أجمل لحظات العمر
+      </p>
+
+      <!-- Event Badge -->
+      <div class="inline-flex items-center gap-3 bg-roseGold-300/10 border border-roseGold-300/40 rounded-full px-7 py-3 text-roseGold-200 text-sm md:text-base font-medium shadow-inner">
+        <i class="fa-regular fa-heart text-roseGold-300 animate-pulse"></i>
+        <span>الجمعة، 16 أكتوبر • الساعة 5:00 مساءً</span>
+      </div>
+
+    </section>
+
+    <section class="glass-card rounded-2xl p-6 md:p-8 text-center border border-roseGold-300/30">
+      <h2 class="font-ruqaa text-2xl md:text-3xl text-roseGold-200 font-bold mb-6 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-hourglass-half text-roseGold-300 text-xl"></i>
+        <span>المتبقي على يوم الفرح</span>
+      </h2>
+
+      <div class="grid grid-cols-4 gap-3 md:gap-5 max-w-md mx-auto" id="countdown">
+        <div class="bg-midnight-900/80 border border-roseGold-300/30 p-3 md:p-4 rounded-xl shadow-inner">
+          <span id="days" class="block font-bold text-2xl md:text-3xl rosegold-gradient-text">00</span>
+          <span class="text-xs text-stone-400 mt-1 block">يوم</span>
+        </div>
+        <div class="bg-midnight-900/80 border border-roseGold-300/30 p-3 md:p-4 rounded-xl shadow-inner">
+          <span id="hours" class="block font-bold text-2xl md:text-3xl rosegold-gradient-text">00</span>
+          <span class="text-xs text-stone-400 mt-1 block">ساعة</span>
+        </div>
+        <div class="bg-midnight-900/80 border border-roseGold-300/30 p-3 md:p-4 rounded-xl shadow-inner">
+          <span id="minutes" class="block font-bold text-2xl md:text-3xl rosegold-gradient-text">00</span>
+          <span class="text-xs text-stone-400 mt-1 block">دقيقة</span>
+        </div>
+        <div class="bg-midnight-900/80 border border-roseGold-300/30 p-3 md:p-4 rounded-xl shadow-inner">
+          <span id="seconds" class="block font-bold text-2xl md:text-3xl rosegold-gradient-text">00</span>
+          <span class="text-xs text-stone-400 mt-1 block">ثانية</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-5">
+      
+      <!-- Date Card -->
+      <div class="glass-card rounded-2xl p-6 text-center hover:scale-[1.02] transition-all duration-300 border border-roseGold-300/30">
+        <div class="w-12 h-12 bg-roseGold-300/15 rounded-full flex items-center justify-center mx-auto mb-3 text-roseGold-300 text-xl">
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <h3 class="font-bold text-lg text-roseGold-200 mb-1">التاريخ</h3>
+        <p class="text-stone-200 text-sm font-medium">الجمعة، 16 أكتوبر</p>
+        <p class="text-stone-400 text-xs mt-1">ليلة السعادة والسرور</p>
+      </div>
+
+      <!-- Venue Card -->
+      <div class="glass-card rounded-2xl p-6 text-center hover:scale-[1.02] transition-all duration-300 border border-roseGold-300/30">
+        <div class="w-12 h-12 bg-roseGold-300/15 rounded-full flex items-center justify-center mx-auto mb-3 text-roseGold-300 text-xl">
+          <i class="fa-solid fa-mosque"></i>
+        </div>
+        <h3 class="font-bold text-lg text-roseGold-200 mb-1">المكان</h3>
+        <p class="text-stone-200 text-sm font-medium">دار مناسبات مسجد الدوحة</p>
+        <p class="text-stone-400 text-xs mt-1">القاعة الرئيسية</p>
+      </div>
+
+      <!-- Time Card -->
+      <div class="glass-card rounded-2xl p-6 text-center hover:scale-[1.02] transition-all duration-300 border border-roseGold-300/30">
+        <div class="w-12 h-12 bg-roseGold-300/15 rounded-full flex items-center justify-center mx-auto mb-3 text-roseGold-300 text-xl">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <h3 class="font-bold text-lg text-roseGold-200 mb-1">التوقيت</h3>
+        <p class="text-stone-200 text-sm font-medium">الساعة 5:00 مساءً</p>
+        <p class="text-stone-400 text-xs mt-1">أهلاً وسهلاً بحضوركم الكريم</p>
+      </div>
+
+    </section>
+
+    <section class="flex flex-wrap items-center justify-center gap-4 py-2">
+      <button onclick="addToCalendar()" class="bg-gradient-to-r from-roseGold-500 to-roseGold-400 hover:from-roseGold-400 hover:to-roseGold-500 text-midnight-900 font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-roseGold-300/20 transition-all duration-300 flex items-center gap-2 hover:scale-105">
+        <i class="fa-solid fa-calendar-plus"></i>
+        <span>إضافة للتقويم</span>
+      </button>
+
+      <button onclick="shareInvitation()" class="bg-midnight-800 border border-roseGold-300/50 hover:border-roseGold-300 text-roseGold-200 font-bold px-8 py-3.5 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 hover:scale-105">
+        <i class="fa-solid fa-share-nodes"></i>
+        <span>مشاركة الدعوة</span>
+      </button>
+    </section>
+
+    <section class="glass-card rounded-2xl p-6 md:p-8 text-center border border-roseGold-300/30 relative">
+      <h2 class="font-ruqaa text-2xl md:text-3xl text-roseGold-200 font-bold mb-2 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-pen-nib text-roseGold-300 text-xl"></i>
+        <span>دفتر التهاني والتبريكات</span>
+      </h2>
+      <p class="text-stone-400 text-xs md:text-sm mb-6">اكتب كلمتك الصادقة ودعواتك الجميلة للعروسين في هذا اليوم المبارك</p>
+
+      <form id="wishForm" onsubmit="addWish(event)" class="max-w-md mx-auto space-y-4 mb-8 text-right">
+        <div>
+          <label class="block text-stone-300 font-medium mb-1.5 text-xs">اسمك الكريم:</label>
+          <input type="text" id="guestName" required placeholder="أدخل اسمك هنا" class="w-full px-4 py-2.5 rounded-xl glass-input focus:outline-none text-sm transition-all">
+        </div>
+        <div>
+          <label class="block text-stone-300 font-medium mb-1.5 text-xs">تهنئتك للعروسين:</label>
+          <textarea id="guestMessage" required rows="3" placeholder="اكتب مباركتك ودعواتك للعروسين..." class="w-full px-4 py-2.5 rounded-xl glass-input focus:outline-none text-sm resize-none transition-all"></textarea>
+        </div>
+        <button type="submit" id="submitWishBtn" class="w-full bg-roseGold-400 hover:bg-roseGold-300 text-midnight-900 font-bold py-3 rounded-xl shadow-md transition-all duration-300 flex items-center justify-center gap-2 hover:scale-[1.01]">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>إرسال التهنئة</span>
+        </button>
+      </form>
+
+      <!-- Real-time Wishes List Container -->
+      <div id="wishesContainer" class="max-w-md mx-auto space-y-3 text-right max-h-80 overflow-y-auto pr-1">
+        <p id="loadingWishesMsg" class="text-stone-400 text-xs italic py-4 text-center">جاري تحميل التهاني...</p>
+      </div>
+    </section>
+
+    <footer class="text-center py-6 text-stone-400 text-xs">
+      <p class="font-amiri text-base text-roseGold-300 mb-1">دامت دياركم عامرة بالأفراح والمسرّات 🎉</p>
+      <p class="opacity-80">زفاف بسمة &amp; يوسف • 16 أكتوبر • دار مناسبات مسجد الدوحة</p>
+    </footer>
+
+  </main>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-midnight-800 text-roseGold-200 border border-roseGold-300/50 px-5 py-3.5 rounded-xl shadow-2xl flex items-center gap-3 pointer-events-none">
+    <i id="toastIcon" class="fa-solid fa-circle-check text-roseGold-300 text-lg"></i>
+    <span id="toastMessage" class="text-xs md:text-sm font-medium">تمت العملية بنجاح!</span>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'basma-youssef-wedding';
+    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
+      apiKey: "AIzaSyDummyKeyForFallback",
+      authDomain: "wedding-app.firebaseapp.com",
+      projectId: "wedding-app",
+      storageBucket: "wedding-app.appspot.com",
+      messagingSenderId: "100000000000",
+      appId: "1:100000000000:web:abcdef123456"
+    };
+
+    let db = null;
+    let auth = null;
+    let wishesCollection = null;
+
+    async function initFirebase() {
+      try {
+        const app = initializeApp(firebaseConfig);
+        auth = getAuth(app);
+        db = getFirestore(app);
+
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+          await signInWithCustomToken(auth, __initial_auth_token);
+        } else {
+          await signInAnonymously(auth);
+        }
+
+        // Shared persistent Firestore path for all guests
+        wishesCollection = collection(db, 'artifacts', appId, 'public', 'data', 'wishes');
+        listenToWishes();
+      } catch (e) {
+        console.warn("Firestore initialization fallback:", e);
+        loadEmptyWishesMsg();
+      }
+    }
+
+    function listenToWishes() {
+      if (!wishesCollection) return;
+
+      onSnapshot(wishesCollection, (snapshot) => {
+        const wishesContainer = document.getElementById('wishesContainer');
+        wishesContainer.innerHTML = '';
+
+        if (snapshot.empty) {
+          wishesContainer.innerHTML = '<p class="text-stone-400 text-xs italic py-4 text-center">كن أول من يهنئ العروسين ويترك بصمته الجميلة!</p>';
+          return;
+        }
+
+        const wishes = [];
+        snapshot.forEach((doc) => {
+          wishes.push({ id: doc.id, ...doc.data() });
+        });
+
+        // Client-side memory sorting by creation date
+        wishes.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+
+        wishes.forEach((w) => {
+          renderWishCard(w.name, w.message, wishesContainer);
+        });
+      }, (error) => {
+        console.error("Firestore error:", error);
+        loadEmptyWishesMsg();
+      });
+    }
+
+    // Submit new wish to cloud database
+    window.addWish = async function(event) {
+      event.preventDefault();
+      const nameInput = document.getElementById('guestName');
+      const msgInput = document.getElementById('guestMessage');
+      const submitBtn = document.getElementById('submitWishBtn');
+      const name = nameInput.value.trim();
+      const message = msgInput.value.trim();
+
+      if (!name || !message) return;
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-50');
+
+      try {
+        if (wishesCollection) {
+          await addDoc(wishesCollection, {
+            name: name,
+            message: message,
+            createdAt: serverTimestamp()
+          });
+        }
+        nameInput.value = '';
+        msgInput.value = '';
+        showToast("تم إرسال تهنئتك بنجاح وتخزينها للجميع! 🎉");
+      } catch (err) {
+        console.error("Error adding wish:", err);
+        showToast("حدث خطأ بسيط، نرجو المحاولة مجدداً.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50');
+      }
+    };
+
+    function renderWishCard(name, message, container) {
+      const card = document.createElement('div');
+      card.className = 'bg-midnight-900/90 border border-roseGold-300/25 rounded-xl p-3.5 transition-all duration-300 hover:border-roseGold-300/50';
+      card.innerHTML = `
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="font-bold text-roseGold-200 text-xs md:text-sm"><i class="fa-solid fa-heart text-roseGold-300 ml-1.5 text-xs"></i>${escapeHtml(name)}</span>
+          <span class="text-[10px] text-stone-400"><i class="fa-regular fa-clock ml-1"></i>الآن</span>
+        </div>
+        <p class="text-stone-300 text-xs md:text-sm leading-relaxed">${escapeHtml(message)}</p>
+      `;
+      container.appendChild(card);
+    }
+
+    function loadEmptyWishesMsg() {
+      const wishesContainer = document.getElementById('wishesContainer');
+      wishesContainer.innerHTML = '<p class="text-stone-400 text-xs italic py-4 text-center">كن أول من يهنئ العروسين ويترك بصمته الجميلة!</p>';
+    }
+
+    initFirebase();
+  </script>
+
+  <script>
+    // New Audio Synth Tone Generator (Soft Acoustic Harp Chords)
+    let audioCtx = null;
+    let isPlaying = false;
+    let synthInterval = null;
+
+    function toggleAudio() {
+      const musicIcon = document.getElementById('musicIcon');
+      if (!isPlaying) {
+        startRomanticHarp();
+        isPlaying = true;
+        musicIcon.className = "fa-solid fa-volume-high text-xl text-roseGold-200 animate-pulse";
+        showToast("تم تشغيل النغمة الترحيبية 🎵");
+      } else {
+        stopRomanticHarp();
+        isPlaying = false;
+        musicIcon.className = "fa-solid fa-music text-xl";
+        showToast("تم إيقاف النغمة");
+      }
+    }
+
+    function startRomanticHarp() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      // Elegant C Major 7th & F Major 7th Harp Note Frequencies (Hz)
+      const harpSequence = [
+        [261.63, 329.63, 392.00, 493.88], // Cmaj7
+        [349.23, 440.00, 523.25, 659.25], // Fmaj7
+        [220.00, 261.63, 329.63, 392.00], // Am7
+        [196.00, 246.94, 293.66, 392.00]  // G
+      ];
+
+      let chordIdx = 0;
+      let noteStep = 0;
+
+      synthInterval = setInterval(() => {
+        const currentChord = harpSequence[chordIdx % harpSequence.length];
+        const freq = currentChord[noteStep % currentChord.length];
+        playHarpPluck(freq);
+
+        noteStep++;
+        if (noteStep % 4 === 0) {
+          chordIdx++;
+        }
+      }, 350);
+    }
+
+    function playHarpPluck(freq) {
+      if (!audioCtx) return;
+      try {
+        const osc1 = audioCtx.createOscillator();
+        const osc2 = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc1.type = 'sine';
+        osc2.type = 'triangle';
+
+        osc1.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        osc2.frequency.setValueAtTime(freq * 2, audioCtx.currentTime); // Soft upper harmonic
+
+        gain.gain.setValueAtTime(0, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.12, audioCtx.currentTime + 0.04);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.8);
+
+        osc1.connect(gain);
+        osc2.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc1.start();
+        osc2.start();
+        osc1.stop(audioCtx.currentTime + 1.85);
+        osc2.stop(audioCtx.currentTime + 1.85);
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    function stopRomanticHarp() {
+      if (synthInterval) clearInterval(synthInterval);
+    }
+
+    // Countdown Timer Logic
+    function updateCountdown() {
+      const now = new Date();
+      let currentYear = now.getFullYear();
+      let targetDate = new Date(`October 16, ${currentYear} 17:00:00`);
+
+      if (now > targetDate) {
+        targetDate = new Date(`October 16, ${currentYear + 1} 17:00:00`);
+      }
+
+      const diff = targetDate - now;
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = String(d).padStart(2, '0');
+      document.getElementById('hours').innerText = String(h).padStart(2, '0');
+      document.getElementById('minutes').innerText = String(m).padStart(2, '0');
+      document.getElementById('seconds').innerText = String(s).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function addToCalendar() {
+      const title = encodeURIComponent("حفل زفاف بسمة ويوسف 💍");
+      const details = encodeURIComponent("نسعد بمشاركتكم لنا فرحتنا المباركة في دار مناسبات مسجد الدوحة.");
+      const location = encodeURIComponent("دار مناسبات مسجد الدوحة");
+      
+      const currentYear = new Date().getFullYear();
+      const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${currentYear}1016T150000Z/${currentYear}1016T190000Z&details=${details}&location=${location}`;
+      
+      window.open(calendarUrl, '_blank');
+    }
+
+    function shareInvitation() {
+      const shareData = {
+        title: 'دعوة زفاف بسمة ويوسف',
+        text: 'يتشرف العروسان بسمة ويوسف بدعوتكم لحضور حفل زفافهما يوم الجمعة 16 أكتوبر الساعة 5:00 مساءً في دار مناسبات مسجد الدوحة.',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData).catch(() => {});
+      } else {
+        copyToClipboard(window.location.href);
+      }
+    }
+
+    function copyToClipboard(text) {
+      const dummy = document.createElement("input");
+      document.body.appendChild(dummy);
+      dummy.value = text;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+      showToast("تم نسخ رابط الدعوة بنجاح! 📋");
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.innerText = text;
+      return div.innerHTML;
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toastMessage');
+      toastMessage.innerText = msg;
+      
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3500);
+    }
+
+    const canvas = document.getElementById('particlesCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const particles = Array.from({ length: 55 }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 6 + 2,
+      speedY: Math.random() * 0.9 + 0.4,
+      speedX: Math.random() * 0.6 - 0.3,
+      angle: Math.random() * Math.PI * 2,
+      spin: Math.random() * 0.02 - 0.01,
+      color: Math.random() > 0.4 ? '#f2abb1' : (Math.random() > 0.5 ? '#ffffff' : '#e88089')
+    }));
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach(p => {
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.angle);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = 0.6;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, p.size, p.size / 2.1, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+
+        p.y += p.speedY;
+        p.x += Math.sin(p.y * 0.012) * 0.4 + p.speedX;
+        p.angle += p.spin;
+
+        if (p.y > height + 20) {
+          p.y = -20;
+          p.x = Math.random() * width;
+        }
+      });
+
+      requestAnimationFrame(drawParticles);
+    }
+
+    window.onload = function() {
+      drawParticles();
+    };
+  </script>
+</body>
+</html>
